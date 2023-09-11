@@ -1,0 +1,113 @@
+<!--Discente: Rennata Arruda Santos-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Avaliação In. Desen. Web I</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="./index.html" target="_self">
+                    <i class="material-icons icon-menu">home</i>
+                    <span class="text-menu">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./listas.html" target="_self">
+                    <i class="material-icons icon-menu">feed</i>
+                    <span class="text-menu">Listas</span>
+                </a>
+            </li>
+            <li>
+                <a href="./tabelas.html" target="_self">
+                    <i class="material-icons icon-menu">table_chart</i>
+                    <span class="text-menu">Tabelas</span>
+                </a>
+            </li>
+            <li>
+                <a href="./frames.html" target="_self">
+                    <i class="material-icons icon-menu">auto_awesome_motion</i>
+                    <span class="text-menu">Frames</span>
+                </a>
+            </li>
+            <li>
+                <a href="./formulario.html" target="_self">
+                    <i class="material-icons icon-menu">description</i>
+                    <span class="text-menu">Formulário</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 class="titulo">Formulário de Inscrição</h1>
+    <form method="POST" action="https://confirmar.animavite.com/processa.php">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div class="label-form">
+                <label for="nome">Nome Completo: </label>
+                <input type="text" id="nome" minlength="10" name="nome" required><br>
+            </div>
+            <div class="label-form">
+                <label for="dt_nascimento">Data de Nascimento: </label>
+                <input type="date" id="dt_nascimento" name="dt_nascimento"><br>
+            </div>
+            <div class="label-form">
+                <label for="sexo">Sexo: </label>
+                <input type="radio" id="feminino" name="sexo" value="F">
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="masculino" name="sexo" value="M">
+                <label for="masculino">Masculino</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Gerais</legend>
+            <div class="label-form selecao">
+                <label for="curso">Escolha o curso desejado:</label><br>
+                <select name="curso" id="curso">
+                    <option value="" selected>Selecioane</option>
+                    <option value="ing">Inglês</option>
+                    <option value="esp">Espanhol</option>
+                    <option value="cor">Coreano</option>
+                </select>
+            </div>
+            <div class="label-form">
+                <label for="pacote">Selecione o pacote de aulas desejado: </label>
+                <input type="radio" id="semanal" name="pacote" value="S">
+                <label for="semanal">Semanal</label>
+                <input type="radio" id="quinzenal" name="pacote" value="q">
+                <label for="quinzenal">Quinzenal</label>
+                <input type="radio" id="mensal" name="pacote" value="M">
+                <label for="mensal">Mensal</label>
+            </div>
+            <div class="label-form selecao">
+                <label for="dias">Indique os dias disponíveis para aulas:</label>
+                <select id="dias" name="diasAula[]" multiple required size="2">
+                    <option value="seg">Segunda</option>
+                    <option value="ter">Terça</option>
+                    <option value="qua">Quarta</option>
+                    <option value="qui">Quinta</option>
+                    <option value="sex">Sexta</option>
+                </select>
+            </div>
+            <div class="label-form">
+                <label for="comentario">Explique o motivo da inscrição:</label><br>
+                <textarea name="comentario" id="comentario" rows="6" style="width: 100%;"></textarea>
+            </div>
+        </fieldset>
+        <div class="submit">
+            <input type="submit" name="Enviar">
+        </div>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
